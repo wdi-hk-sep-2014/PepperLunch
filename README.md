@@ -34,6 +34,7 @@ bundle exec rspec
 
 ## Resources
 
+- [Rails ActiveRecord](https://speakerdeck.com/fermartin/ga-rails-activerecord)
 - [Model Validation](http://guides.rubyonrails.org/active_record_validations.html)
 - [Model Association](http://guides.rubyonrails.org/association_basics.html)
 - [Better Specs](http://betterspecs.org/)
