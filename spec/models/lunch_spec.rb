@@ -29,4 +29,20 @@ RSpec.describe Lunch, :type => :model do
     lunch.save
     expect(lunch).to be_valid
   end
+
+  describe "belongs to user lunch" do
+    it "should belong to a user" do
+      user = User.create email: 'harry.ng@ga.co', first_name: 'Harry', last_name: 'Ng'
+      lunch = Lunch.create name: 'Pepper Lunch', location: 'Cyberport', user: user
+
+      expect(lunch).to be_valid
+    end
+
+    it "should be invalid if the lunch does not have a user" do
+      user = User.create email: 'harry.ng@ga.co', first_name: 'Harry', last_name: 'Ng'
+      lunch = Lunch.create name: 'Pepper Lunch', location: 'Cyberport', user: nil
+
+      expect(lunch).to be_invalid
+    end
+  end
 end

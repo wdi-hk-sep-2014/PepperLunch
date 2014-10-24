@@ -36,4 +36,13 @@ RSpec.describe User, :type => :model do
     expect(user).to be_invalid
   end
 
+  describe "user lunch" do
+    it "should increase lunch count in user" do
+      user = User.create email: 'harry.ng@ga.co', first_name: 'Harry', last_name: 'Ng'
+      expect(user.lunch_count).to eq(0)
+      lunch = Lunch.create name: 'Pepper Lunch', location: 'Cyberport', user: user
+      expect(user.lunch_count).to eq(1)
+    end
+  end
+
 end
