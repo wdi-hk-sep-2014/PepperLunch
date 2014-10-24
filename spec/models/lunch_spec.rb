@@ -3,6 +3,8 @@ require 'rails_helper'
 RSpec.describe Lunch, :type => :model do
   it "passes validation with all valid information" do
     lunch = Lunch.new
+    lunch.name = "Pepper Lunch"
+    lunch.location = "Cyberport"
 
     expect(lunch).to be_valid
   end
@@ -18,7 +20,6 @@ RSpec.describe Lunch, :type => :model do
     lunch = Lunch.new
     lunch.save
     expect(lunch).to be_invalid
-    expect(lunch).to have(1).errors_on(:name)
   end
 
   it "should pass validation without location" do
