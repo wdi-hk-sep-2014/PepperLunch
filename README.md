@@ -29,3 +29,11 @@ bundle exec rspec
 1. Modify `Lunch` model to pass the test
 2. Modify `User` model to pass the test
 3. You will need to handle between relation of `User` and `Lunch`
+
+---
+
+## Resources
+
+- [Model Validation](http://guides.rubyonrails.org/active_record_validations.html)
+- [Model Association](http://guides.rubyonrails.org/association_basics.html)
+- [Better Specs](http://betterspecs.org/)
