@@ -1,2 +1,19 @@
 <h1>Welcome to PepperLunch Tracker</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+
+<div ng-controller="PersonCtrl">
+  <form ng-submit="handleSubmit(person)">
+    <div>
+      <input ng-model="person.firstName">
+    </div>
+    <div>
+      <input ng-model="person.lastName">
+    </div>
+    <button>Save</button>
+  </form>
+
+  <div ng-repeat="person in people">
+    {{ person.firstName }} {{ person.lastName }}
+  </div>
+</div>
