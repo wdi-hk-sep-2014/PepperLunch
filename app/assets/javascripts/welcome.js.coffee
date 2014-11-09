@@ -11,3 +11,8 @@ App.controller("PersonCtrl", ["$scope", ($scope)->
     $scope.people.push(@person)
     @person = {}
 ])
+
+$ ->
+  $('div.btn').click (e) ->
+    e.preventDefault()
+    $(@).toggleClass('btn-success btn-danger')
